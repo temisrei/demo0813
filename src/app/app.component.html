@@ -77,9 +77,13 @@
                     <label for="txt-fb38ecdd-5813-4d10-8c5f-8d901c7c731e" style="display:none">Search</label>
 					<input type="text"
 
-          [(ngModel)]="keyword"
+          #keywordInput
 
-          placeholder="請輸入搜尋關鍵字" accesskey="s"><input type="button" value="搜尋" id="searchbutton">
+          placeholder="請輸入搜尋關鍵字" accesskey="s">
+          
+          <input type="button" value="搜尋" id="searchbutton"
+          (click)="doSearch($event, keywordInput)"
+          >
           {{ keyword }}
                   </div>
               </div>
