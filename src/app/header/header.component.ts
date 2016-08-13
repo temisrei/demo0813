@@ -7,14 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  title = 'Hello World'
-  titleurl = 'http://blog.miniasp.com/'
-  subtitle = '記載著 <strong>Will</strong> 在網路世界的學習心得與技術分享'
+  title = 'Hello World';
+  titleurl = 'http://blog.miniasp.com/';
+  subtitle = '記載著 Will 在網路世界的學習心得與技術分享';
+  num = 10;
 
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  plusOne($event: MouseEvent) {
+    console.log($event);
+    if($event.metaKey) {
+      this.num--;
+    } else {
+      this.num++;
+    }
   }
 
 }
