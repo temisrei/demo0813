@@ -10,7 +10,7 @@
           <div id="ctl00_cphBody_PostList1_posts" class="posts">
 
             <!-- Article START-->
-            <article class="post" id="post{{i}}" *ngFor="let item of data; let i = index;">
+            <article class="post" id="post{{i}}" *ngFor="let item of searchSvc.data; let i = index;">
               <header class="post-header">
                 <h2 class="post-title">
                     <a [href]="item.href">
@@ -52,15 +52,11 @@
         <aside class="col-md-4 sidebar-wrapper">
           <div id="widgetzone_be_WIDGET_ZONE" class="widgetzone">
 
-            {{ test }}
+            {{ searchSvc.keyword }}
 
-          <app-search
-            [keyword]="keyword_default"
-            (search)="test=$event">
+          <app-search></app-search>
 
-          </app-search>
-
-<div [ngSwitch]="keyword">
+<div [ngSwitch]="searchSvc.keyword">
   <div *ngSwitchCase="'1'">
             <!-- Calendar START -->
             <div class="widget calendar" id="widgete02e41df-35d8-4572-a862-0dd0fb2fa504">
