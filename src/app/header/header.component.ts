@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,13 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  title = 'Hello World';
-  titleurl = 'http://blog.miniasp.com/';
+  @Input()
+  title: string;
+  @Input()
+  titleurl: string;
+
   subtitle = '記載著 Will 在網路世界的學習心得與技術分享';
   num = 10;
 
   subtitle_bgcolor = "yellow";
-
 
   constructor() { }
 
