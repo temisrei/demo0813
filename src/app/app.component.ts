@@ -10,11 +10,7 @@ export class AppComponent {
   title = 'Hello World';
   titleurl = 'http://blog.miniasp.com/';
 
-  keyword: string;
-
-  doSearch(keyword: string) {
-    this.keyword = keyword;
-  }
+  keyword_default = 'TEST';
 
   data = [
     {
