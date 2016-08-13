@@ -12,6 +12,8 @@ export class HeaderComponent implements OnInit {
   subtitle = '記載著 Will 在網路世界的學習心得與技術分享';
   num = 10;
 
+  subtitle_bgcolor = "yellow";
+
 
   constructor() { }
 
@@ -25,6 +27,10 @@ export class HeaderComponent implements OnInit {
     } else {
       this.num++;
     }
+  }
+
+  getStyle() {
+    return {'background-color': this.subtitle_bgcolor};
   }
 
 }
