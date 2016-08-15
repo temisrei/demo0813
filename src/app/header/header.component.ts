@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import { Component, OnInit, OnChanges, Input, ViewEncapsulation } from '@angular/core';
 import { SearchService } from '../search.service';
+=======
+import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
+>>>>>>> 3f901f2157b48652eadf526f3796312f1c94b690
 
 @Component({
   selector: 'app-header',
